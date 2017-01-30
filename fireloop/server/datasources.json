@@ -1,0 +1,25 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mymongo": {
+    "host": "localhost",
+    "port": 0,
+    "url": "mongodb://localhost/app",
+    "database": "app",
+    "password": "",
+    "name": "mymongo",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "my-redis": {
+    "host": "localhost",
+    "port": 0,
+    "url": "redis://localhost",
+    "password": "",
+    "name": "my-redis",
+    "db": 0,
+    "connector": "kv-redis"
+  }
+}

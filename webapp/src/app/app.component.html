@@ -1,0 +1,16 @@
+<h1>
+  {{title}}
+</h1>
+
+<form (submit)="create()">
+  <input name="pantherevent" type="message" [(ngModel)]="pantherevent.message" placeholder="message" />
+  <input name="pantherevent" type="severity" [(ngModel)]="pantherevent.severity" placeholder="severity" />
+  <button>Add Todo</button>
+</form>
+<ul *ngIf="panthereventRef">
+  <li *ngFor="let _pantherevent of pantherevents">
+    <input name="_pantherevent.id" [(ngModel)]="_pantherevent.message" />
+    <button (click)="update(_pantherevent)">Update</button>
+    <button (click)="remove(_pantherevent)">Remove</button>
+  </li>
+</ul>

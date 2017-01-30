@@ -1,0 +1,48 @@
+{
+  "name": "PantherEvent",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": {
+      "required": false,
+      "createdAt": "first_occurence",
+      "updatedAt": "state_change"
+    },
+    "Stats": [
+      {
+        "method": "stats",
+        "endpoint": "/stats",
+        "description": "Statistical information for PantherEvent registers.",
+        "type": "model",
+        "count": {
+          "on": "createdAt",
+          "by": "index"
+        }
+      }
+    ]
+  },
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "number"
+    },
+    "serial": {
+      "type": "number",
+      "index":{
+        "unique": true
+      }
+    },
+    "last_occurence":{
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
