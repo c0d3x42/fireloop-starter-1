@@ -39,7 +39,7 @@
     "dataSource": "mymongo",
     "public": true
   },
-  "counters": {
+  "Counters": {
     "dataSource": "mymongo",
     "public": false
   }
